@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ✅ TOP UTILITY BAR -->
+    <div class="bg-light py-2 border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <a href="#" class="me-3 text-decoration-none text-muted">Feedback</a>
+                <a href="#" class="me-3 text-decoration-none text-muted">Donate</a>
+                <span class="text-muted">© (02) 9808 9222</span>
+            </div>
+            <div class="d-flex align-items-center">
+                <input type="text" class="form-control form-control-sm me-2" placeholder="start typing to search..." style="width: 200px;">
+                <button class="btn btn-sm btn-outline-secondary">@</button>
+                
+                <a href="#" class="btn btn-primary" style="background-color: #5340BF; border: none;">Contact US</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ MAIN NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #5340BF;">
+
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+             <img src="{{ url_for('static', filename='slogo.png') }}" alt="Sydney Neuro Rehabilitation" class="logo" >
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+</li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="conditionsDropdown" role="button" data-bs-toggle="dropdown">Conditions</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="disciplinesDropdown" role="button" data-bs-toggle="dropdown">Disciplines</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">For Referrers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Visitors</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ✅ Page-Specific Content -->
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- ✅ Footer (no changes, I kept your original one as it is) -->
+    <!-- ✅ Footer -->
+    <footer class="footer mt-auto">
+        <!-- Top Footer Section -->
+        <div class="footer-top text-white py-4" style="background-color:#5340BF;">
+            <div class="container text-center">
+                <h2 class="mb-3">Get in touch with our team to see how we can assist</h2>
+                <p class="mb-4">NeuroRehabilitation is committed to providing a supportive experience for all our clients</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-lg btn-outline-light">Enquire Online</button>
+                    <button class="btn btn-lg btn-outline-light">(02) 9808 9222</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div class="footer-content py-5" bg:primary;">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- About Us Column -->
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="mb-4" style="color: #5340BF;">Sydney Neuro Rehabilitation</h5>
+                        <p class="mb-4">Providing comprehensive rehabilitation for people with neurological conditions through specialized programs and evidence-based treatments.</p>
+                        <div class="social-links">
+                            <a href="#" class="me-2 text-decoration-none" style="color: #0476A7;"><i class="fab fa-facebook-f fa-lg"></i></a>
+                            <a href="#" class="me-2 text-decoration-none" style="color: #0476A7;"><i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#" class="me-2 text-decoration-none" style="color: #0476A7;"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                            <a href="#" class="me-2 text-decoration-none" style="color: #0476A7;"><i class="fab fa-instagram fa-lg"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="mb-4" style="color: #5340BF;">Our Services</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="text-decoration-none" style="color:  #5340BF;">Neurological Rehabilitation</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none" style="color:  #5340BF;">Spasticity Management</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none" style="color:  #5340BF;">Cervical Dystonia</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none" style="color:  #5340BF;">Physical Therapy</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none" style="color:  #5340BF;">Speech Therapy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="mb-4" style="color: #5340BF;">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="{{ url_for('home') }}" class="text-decoration-none" style="color:  #5340BF;">Home</a></li>
+                            <li class="mb-2"><a href="{{ url_for('about') }}" class="text-decoration-none" style="color:  #5340BF;">About Us</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none" style="color: #5340BF;">For Referrers</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none" style="color:  #5340BF;">Patient Information</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none" style="color:  #5340BF;">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Column -->
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="mb-4" style="color: #5340BF;">Contact Details</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="fas fa-map-marker-alt me-3 mt-1" style="color: #5340BF;"></i>
+                                <span>Suite 22, 16 Innovation Parkway<br>Birtinya QLD 4575</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center">
+                                <i class="fas fa-phone me-3" style="color: #5340BF;"></i>
+                                <span>(02) 9808 9222</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center">
+                                <i class="fas fa-envelope me-3" style="color: #5340BF;"></i>
+                                <a href="mailto:admin@neurorehabilitation.com.au" class="text-decoration-none" style="color: #5340BF ;">admin@neurorehabilitation.com.au</a>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center">
+                                <i class="fas fa-clock me-3" style="color: #5340BF;"></i>
+                                <span>Mon-Fri: 8:00 AM - 6:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom text-center py-3 text-white" style="background-color: #5340BF;">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                    <p class="mb-2 mb-md-0">Copyright © 2025 Sydney Neuro Rehabilitation. All rights reserved.</p>
+                    <div>
+                        <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                        <a href="#" class="text-white text-decoration-none me-3">Terms of Use</a>
+                        <a href="#" class="text-white text-decoration-none">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

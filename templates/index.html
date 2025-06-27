@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block title %}Sydney Neuro Rehabilitation{% endblock %}
+
+{% block content %}
+<!-- Your page-specific content starts here -->
+
+
+
+<!-- Carousel Section -->
+<div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{ url_for('static', filename='images/photo1.jpg') }}" class="d-block w-100" alt="Photo 1">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='images/photo2.jpg') }}" class="d-block w-100" alt="Photo 2">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='images/photo3.jpg') }}" class="d-block w-100" alt="Photo 3">
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+<div class="container py-5">
+    <div class="row g-4">
+        <!-- About Dr. Jennings-Bell Card -->
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title" style="color: #5340BF;">About Dr. Sanjeev Shrestha</h3>
+                    <h4 class="card-subtitle mb-3 text-muted">Reputable, Highly–Skilled Physician</h4>
+                    <p class="card-text">
+                        Dr Sanjeev Shrestha is a specialist and Consultant Physician in Rehabilitation Medicine 
+                        subspecialising in ultrasound-guided treatment of spasticity and cervical dystonia.
+                    </p>
+                    <a href="#" class="btn btn-primary" style="background-color: #5340BF; border: none;">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Patient Information Card -->
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title" style="color: #5340BF;">Patient Information</h3>
+                    <h4 class="card-subtitle mb-3 text-muted">Step-by-step Assistance</h4>
+                    <p class="card-text">
+                        Read our Patient information handout to find out details regarding spasticity, 
+                        cervical dystonia, clinic locations, fees and botulinum toxin.
+                    </p>
+                    <a href="#" class="btn btn-primary" style="background-color: #5340BF; border: none;">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Referrals Card -->
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title" style="color: #5340BF;">Referrals</h3>
+                    <h4 class="card-subtitle mb-3 text-muted">Government Assistance Available</h4>
+                    <p class="card-text">
+                        A consultation can be requested by your GP or specialist which enables Medicare funding. 
+                        Dr Sanjeev Shrestha will then review your referral and staff will contact you to arrange an appointment.
+                    </p>
+                    <a href="#" class="btn btn-primary" style="background-color: #5340BF; border: none;">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="container py-5">
+    <div class="row g-4">
+        <!-- About Dr. Jennings-Bell Card -->
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title" style="color: #5340BF;">About Dr. Sanjeev Shrestha</h3>
+                    <h4 class="card-subtitle mb-3 text-muted">Reputable, Highly–Skilled Physician</h4>
+                    <p class="card-text">
+                        Dr Sanjeev Shresthe is a specialist and Consultant Physician in Rehabilitation Medicine 
+                        subspecialising in ultrasound-guided treatment of spasticity and cervical dystonia.
+                    </p>
+                    <a href="#" class="btn btn-primary" style="background-color: #5340BF; border: none;">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Patient Information Card -->
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title" style="color: #5340BF;">Patient Information</h3>
+                    <h4 class="card-subtitle mb-3 text-muted">Step-by-step Assistance</h4>
+                    <p class="card-text">
+                        Read our Patient information handout to find out details regarding spasticity, 
+                        cervical dystonia, clinic locations, fees and botulinum toxin.
+                    </p>
+                    <a href="#" class="btn btn-primary" style="background-color: #5340BF; border: none;">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Referrals Card -->
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title" style="color: #5340BF;">Referrals</h3>
+                    <h4 class="card-subtitle mb-3 text-muted">Government Assistance Available</h4>
+                    <p class="card-text">
+                        A consultation can be requested by your GP or specialist which enables Medicare funding. 
+                        Dr Sanjeev Shrestha will then review your referral and staff will contact you to arrange an appointment.
+                    </p>
+                    <a href="#" class="btn btn-primary" style="background-color: #5340BF; border: none;">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Your page-specific content ends here -->
+{% endblock %}
