@@ -6,4 +6,6 @@ services:
         value: /tmp/cargo
       - key: RUSTUP_HOME
         value: /tmp/rustup
-    
+    buildCommand: |
+      mkdir -p /tmp/cargo /tmp/rustup
+      pip install -r requirements.txt
