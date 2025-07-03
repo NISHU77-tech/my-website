@@ -2,9 +2,13 @@ services:
   - type: web
     env: python
     buildCommand: |
+      # Install Rust toolchain non-interactively
       curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+      # Load Rust environment variables
       source $HOME/.cargo/env
+      # Set stable as default Rust toolchain
       rustup default stable
+      # Then install Python dependencies
       pip install -r requirements.txt
     envVars:
       - key: CARGO_HOME
