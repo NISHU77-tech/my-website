@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: my-app
-    runtime: python
-    buildCommand: |
-      curl https://sh.rustup.rs -sSf | sh -s -- -y
-      source $HOME/.cargo/env
-      pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    env: python
+    envVars:
+      - key: CARGO_HOME
+        value: /tmp/cargo
+      - key: RUSTUP_HOME
+        value: /tmp/rustup
+    
